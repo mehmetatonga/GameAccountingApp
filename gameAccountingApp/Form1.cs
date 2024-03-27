@@ -15,6 +15,29 @@ namespace gameAccountingApp
         public Form1()
         {
             InitializeComponent();
+            PazarSatisListele();
+            EldenSatisListele();
+            GbSatisListele();
+        }
+        void PazarSatisListele()
+        {
+            string sql = "Select * from pazarSatis";
+            PazarSatisGridWiew.DataSource = CRUD.Listele(sql);
+        }
+        void EldenSatisListele()
+        {
+            string sql = "Select * from EldenSatis";
+            EldenSatisGridWiew.DataSource = CRUD.Listele(sql);
+        }
+        void GbSatisListele()
+        {
+            string sql = "Select * from GbSatis";
+            GbSatisGridWiew.DataSource = CRUD.Listele(sql);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
