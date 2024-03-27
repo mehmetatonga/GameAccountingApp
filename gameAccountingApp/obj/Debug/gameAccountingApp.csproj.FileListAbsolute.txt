@@ -17,3 +17,5 @@ C:\Users\mehme\Desktop\Kod Örnekleri\GameAccountingApp\gameAccountingApp\bin\De
 C:\Users\mehme\Desktop\Kod Örnekleri\GameAccountingApp\gameAccountingApp\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\mehme\Desktop\Kod Örnekleri\GameAccountingApp\gameAccountingApp\bin\Debug\System.Data.SQLite.xml
 C:\Users\mehme\Desktop\Kod Örnekleri\GameAccountingApp\gameAccountingApp\obj\Debug\gameAccountingApp.csproj.CopyComplete
+C:\Users\mehme\Desktop\Kod Örnekleri\GameAccountingApp\gameAccountingApp\obj\Debug\gameAccountingApp.GameAccountingAppForm.resources
+C:\Users\mehme\Desktop\Kod Örnekleri\GameAccountingApp\gameAccountingApp\obj\Debug\gameAccountingApp.PazarSatisEklemeForm.resources

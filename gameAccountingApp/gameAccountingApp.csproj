@@ -67,16 +67,43 @@
   <ItemGroup>
     <Compile Include="Baglan.cs" />
     <Compile Include="CRUD.cs" />
+    <Compile Include="EldenSatisEklemeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EldenSatisEklemeForm.Designer.cs">
+      <DependentUpon>EldenSatisEklemeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GBSatisEkleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GBSatisEkleForm.Designer.cs">
+      <DependentUpon>GBSatisEkleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PazarSatisEklemeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PazarSatisEklemeForm.Designer.cs">
+      <DependentUpon>PazarSatisEklemeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EldenSatisEklemeForm.resx">
+      <DependentUpon>EldenSatisEklemeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GBSatisEkleForm.resx">
+      <DependentUpon>GBSatisEkleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PazarSatisEklemeForm.resx">
+      <DependentUpon>PazarSatisEklemeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

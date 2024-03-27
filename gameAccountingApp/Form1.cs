@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace gameAccountingApp
 {
-    public partial class Form1 : Form
+    public partial class GameAccountingAppForm : Form
     {
-        public Form1()
+        public GameAccountingAppForm()
         {
             InitializeComponent();
             PazarSatisListele();
@@ -21,7 +21,8 @@ namespace gameAccountingApp
         }
         void PazarSatisListele()
         {
-            string sql = "Select * from pazarSatis";
+            //string sql = "Select * from pazarSatis";
+            string sql = "Select Date,NickId,UrunId,Adet,PazarFiyati,NetFiyat from pazarSatis";
             PazarSatisGridWiew.DataSource = CRUD.Listele(sql);
         }
         void EldenSatisListele()
@@ -36,6 +37,11 @@ namespace gameAccountingApp
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
         {
 
         }

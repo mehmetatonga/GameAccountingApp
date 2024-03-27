@@ -1,6 +1,6 @@
 ﻿namespace gameAccountingApp
 {
-    partial class Form1
+    partial class GameAccountingAppForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,186 +31,252 @@
             this.PazarSatisGridWiew = new System.Windows.Forms.DataGridView();
             this.EldenSatisGridWiew = new System.Windows.Forms.DataGridView();
             this.GbSatisGridWiew = new System.Windows.Forms.DataGridView();
-            this.ToplamGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.PazarSatisiSilBtn = new System.Windows.Forms.Button();
+            this.EldenSatisSilBtn = new System.Windows.Forms.Button();
+            this.GBSatisiSilBtn = new System.Windows.Forms.Button();
+            this.UrunEkleBtn = new System.Windows.Forms.Button();
+            this.KullaniciEkleBtn = new System.Windows.Forms.Button();
             this.sqLiteCommand1 = new System.Data.SQLite.SQLiteCommand();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.PazarSatisiEkleBtn = new System.Windows.Forms.Button();
+            this.EldenSatisEkleBtn = new System.Windows.Forms.Button();
+            this.GBSatisiEkleBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PazarSatisGridWiew)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EldenSatisGridWiew)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GbSatisGridWiew)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ToplamGridView1)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // PazarSatisGridWiew
             // 
+            this.PazarSatisGridWiew.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PazarSatisGridWiew.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.PazarSatisGridWiew.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.PazarSatisGridWiew.Location = new System.Drawing.Point(12, 52);
+            this.PazarSatisGridWiew.Location = new System.Drawing.Point(6, 6);
             this.PazarSatisGridWiew.Name = "PazarSatisGridWiew";
-            this.PazarSatisGridWiew.Size = new System.Drawing.Size(932, 332);
+            this.PazarSatisGridWiew.Size = new System.Drawing.Size(1860, 805);
             this.PazarSatisGridWiew.TabIndex = 0;
             // 
             // EldenSatisGridWiew
             // 
+            this.EldenSatisGridWiew.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.EldenSatisGridWiew.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.EldenSatisGridWiew.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.EldenSatisGridWiew.Location = new System.Drawing.Point(960, 52);
+            this.EldenSatisGridWiew.Location = new System.Drawing.Point(6, 6);
             this.EldenSatisGridWiew.Name = "EldenSatisGridWiew";
-            this.EldenSatisGridWiew.Size = new System.Drawing.Size(932, 332);
+            this.EldenSatisGridWiew.Size = new System.Drawing.Size(1860, 805);
             this.EldenSatisGridWiew.TabIndex = 1;
             // 
             // GbSatisGridWiew
             // 
+            this.GbSatisGridWiew.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GbSatisGridWiew.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GbSatisGridWiew.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GbSatisGridWiew.Location = new System.Drawing.Point(12, 529);
+            this.GbSatisGridWiew.Location = new System.Drawing.Point(6, 6);
             this.GbSatisGridWiew.Name = "GbSatisGridWiew";
-            this.GbSatisGridWiew.Size = new System.Drawing.Size(932, 332);
+            this.GbSatisGridWiew.Size = new System.Drawing.Size(1860, 805);
             this.GbSatisGridWiew.TabIndex = 2;
             // 
-            // ToplamGridView1
+            // PazarSatisiSilBtn
             // 
-            this.ToplamGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.ToplamGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ToplamGridView1.Location = new System.Drawing.Point(960, 529);
-            this.ToplamGridView1.Name = "ToplamGridView1";
-            this.ToplamGridView1.Size = new System.Drawing.Size(932, 332);
-            this.ToplamGridView1.TabIndex = 3;
+            this.PazarSatisiSilBtn.BackColor = System.Drawing.Color.LightCoral;
+            this.PazarSatisiSilBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PazarSatisiSilBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.PazarSatisiSilBtn.Location = new System.Drawing.Point(3, 857);
+            this.PazarSatisiSilBtn.Name = "PazarSatisiSilBtn";
+            this.PazarSatisiSilBtn.Size = new System.Drawing.Size(1866, 40);
+            this.PazarSatisiSilBtn.TabIndex = 7;
+            this.PazarSatisiSilBtn.Text = "Pazar Satışı Sil";
+            this.PazarSatisiSilBtn.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // EldenSatisSilBtn
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(363, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 39);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Pazar Satış";
+            this.EldenSatisSilBtn.BackColor = System.Drawing.Color.LightCoral;
+            this.EldenSatisSilBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.EldenSatisSilBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.EldenSatisSilBtn.Location = new System.Drawing.Point(3, 857);
+            this.EldenSatisSilBtn.Name = "EldenSatisSilBtn";
+            this.EldenSatisSilBtn.Size = new System.Drawing.Size(1866, 40);
+            this.EldenSatisSilBtn.TabIndex = 8;
+            this.EldenSatisSilBtn.Text = "Elden Satış Sil";
+            this.EldenSatisSilBtn.UseVisualStyleBackColor = false;
+            this.EldenSatisSilBtn.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label2
+            // GBSatisiSilBtn
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(1343, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(203, 39);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Elden Satış";
+            this.GBSatisiSilBtn.BackColor = System.Drawing.Color.LightCoral;
+            this.GBSatisiSilBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.GBSatisiSilBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.GBSatisiSilBtn.Location = new System.Drawing.Point(3, 857);
+            this.GBSatisiSilBtn.Name = "GBSatisiSilBtn";
+            this.GBSatisiSilBtn.Size = new System.Drawing.Size(1866, 40);
+            this.GBSatisiSilBtn.TabIndex = 9;
+            this.GBSatisiSilBtn.Text = "GB Satışı Sil";
+            this.GBSatisiSilBtn.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // UrunEkleBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.LimeGreen;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(354, 390);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(231, 40);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Pazar Satışı Ekle";
-            this.button1.UseVisualStyleBackColor = false;
+            this.UrunEkleBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.UrunEkleBtn.BackColor = System.Drawing.Color.LimeGreen;
+            this.UrunEkleBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.UrunEkleBtn.Location = new System.Drawing.Point(1390, 973);
+            this.UrunEkleBtn.Name = "UrunEkleBtn";
+            this.UrunEkleBtn.Size = new System.Drawing.Size(231, 40);
+            this.UrunEkleBtn.TabIndex = 10;
+            this.UrunEkleBtn.Text = "Ürün Ekle";
+            this.UrunEkleBtn.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // KullaniciEkleBtn
             // 
-            this.button2.BackColor = System.Drawing.Color.LimeGreen;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(1350, 390);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(231, 40);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Elden Satış Ekle";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.LimeGreen;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.Location = new System.Drawing.Point(338, 867);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(231, 40);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "GB Satışı Ekle";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.LimeGreen;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.Location = new System.Drawing.Point(1661, 956);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(231, 40);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Ürün Ekle";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.LimeGreen;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button5.Location = new System.Drawing.Point(1661, 898);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(231, 40);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "Kullanıcı Ekle";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(363, 477);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(162, 39);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "GB Satış";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(1349, 477);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(232, 39);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Toplam Satış";
+            this.KullaniciEkleBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.KullaniciEkleBtn.BackColor = System.Drawing.Color.LimeGreen;
+            this.KullaniciEkleBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.KullaniciEkleBtn.Location = new System.Drawing.Point(1651, 973);
+            this.KullaniciEkleBtn.Name = "KullaniciEkleBtn";
+            this.KullaniciEkleBtn.Size = new System.Drawing.Size(231, 40);
+            this.KullaniciEkleBtn.TabIndex = 11;
+            this.KullaniciEkleBtn.Text = "Kullanıcı Ekle";
+            this.KullaniciEkleBtn.UseVisualStyleBackColor = false;
             // 
             // sqLiteCommand1
             // 
             this.sqLiteCommand1.CommandText = null;
             // 
-            // Form1
+            // tabControl1
+            // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1880, 938);
+            this.tabControl1.TabIndex = 14;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.PazarSatisiEkleBtn);
+            this.tabPage1.Controls.Add(this.PazarSatisGridWiew);
+            this.tabPage1.Controls.Add(this.PazarSatisiSilBtn);
+            this.tabPage1.Location = new System.Drawing.Point(4, 34);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1872, 900);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Pazar Satış";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.EldenSatisEkleBtn);
+            this.tabPage2.Controls.Add(this.EldenSatisGridWiew);
+            this.tabPage2.Controls.Add(this.EldenSatisSilBtn);
+            this.tabPage2.Location = new System.Drawing.Point(4, 34);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1872, 900);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Elden Satış";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.GBSatisiEkleBtn);
+            this.tabPage3.Controls.Add(this.GbSatisGridWiew);
+            this.tabPage3.Controls.Add(this.GBSatisiSilBtn);
+            this.tabPage3.Location = new System.Drawing.Point(4, 34);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1872, 900);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "GB Satış";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 34);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1872, 900);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Toplam Satış";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // PazarSatisiEkleBtn
+            // 
+            this.PazarSatisiEkleBtn.BackColor = System.Drawing.Color.LimeGreen;
+            this.PazarSatisiEkleBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PazarSatisiEkleBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.PazarSatisiEkleBtn.Location = new System.Drawing.Point(3, 817);
+            this.PazarSatisiEkleBtn.Name = "PazarSatisiEkleBtn";
+            this.PazarSatisiEkleBtn.Size = new System.Drawing.Size(1866, 40);
+            this.PazarSatisiEkleBtn.TabIndex = 8;
+            this.PazarSatisiEkleBtn.Text = "Pazar Satışı Ekle";
+            this.PazarSatisiEkleBtn.UseVisualStyleBackColor = false;
+            this.PazarSatisiEkleBtn.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // EldenSatisEkleBtn
+            // 
+            this.EldenSatisEkleBtn.BackColor = System.Drawing.Color.LimeGreen;
+            this.EldenSatisEkleBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.EldenSatisEkleBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.EldenSatisEkleBtn.Location = new System.Drawing.Point(3, 817);
+            this.EldenSatisEkleBtn.Name = "EldenSatisEkleBtn";
+            this.EldenSatisEkleBtn.Size = new System.Drawing.Size(1866, 40);
+            this.EldenSatisEkleBtn.TabIndex = 9;
+            this.EldenSatisEkleBtn.Text = "Elden Satış Ekle";
+            this.EldenSatisEkleBtn.UseVisualStyleBackColor = false;
+            // 
+            // GBSatisiEkleBtn
+            // 
+            this.GBSatisiEkleBtn.BackColor = System.Drawing.Color.LimeGreen;
+            this.GBSatisiEkleBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.GBSatisiEkleBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.GBSatisiEkleBtn.Location = new System.Drawing.Point(3, 817);
+            this.GBSatisiEkleBtn.Name = "GBSatisiEkleBtn";
+            this.GBSatisiEkleBtn.Size = new System.Drawing.Size(1866, 40);
+            this.GBSatisiEkleBtn.TabIndex = 10;
+            this.GBSatisiEkleBtn.Text = "GB Satışı Ekle";
+            this.GBSatisiEkleBtn.UseVisualStyleBackColor = false;
+            // 
+            // GameAccountingAppForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.ToplamGridView1);
-            this.Controls.Add(this.GbSatisGridWiew);
-            this.Controls.Add(this.EldenSatisGridWiew);
-            this.Controls.Add(this.PazarSatisGridWiew);
-            this.Name = "Form1";
+            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.UrunEkleBtn);
+            this.Controls.Add(this.KullaniciEkleBtn);
+            this.Name = "GameAccountingAppForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Game Accounting App";
             ((System.ComponentModel.ISupportInitialize)(this.PazarSatisGridWiew)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EldenSatisGridWiew)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GbSatisGridWiew)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ToplamGridView1)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -219,17 +285,20 @@
         private System.Windows.Forms.DataGridView PazarSatisGridWiew;
         private System.Windows.Forms.DataGridView EldenSatisGridWiew;
         private System.Windows.Forms.DataGridView GbSatisGridWiew;
-        private System.Windows.Forms.DataGridView ToplamGridView1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button PazarSatisiSilBtn;
+        private System.Windows.Forms.Button EldenSatisSilBtn;
+        private System.Windows.Forms.Button GBSatisiSilBtn;
+        private System.Windows.Forms.Button UrunEkleBtn;
+        private System.Windows.Forms.Button KullaniciEkleBtn;
         private System.Data.SQLite.SQLiteCommand sqLiteCommand1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Button PazarSatisiEkleBtn;
+        private System.Windows.Forms.Button EldenSatisEkleBtn;
+        private System.Windows.Forms.Button GBSatisiEkleBtn;
     }
 }
 
