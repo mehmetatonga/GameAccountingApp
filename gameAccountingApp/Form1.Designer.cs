@@ -68,6 +68,7 @@
             this.UrunEkleBtn.TabIndex = 10;
             this.UrunEkleBtn.Text = "Ürün Ekle";
             this.UrunEkleBtn.UseVisualStyleBackColor = false;
+            this.UrunEkleBtn.Click += new System.EventHandler(this.UrunEkleBtn_Click);
             // 
             // KullaniciEkleBtn
             // 
@@ -80,6 +81,7 @@
             this.KullaniciEkleBtn.TabIndex = 11;
             this.KullaniciEkleBtn.Text = "Kullanıcı Ekle";
             this.KullaniciEkleBtn.UseVisualStyleBackColor = false;
+            this.KullaniciEkleBtn.Click += new System.EventHandler(this.KullaniciEkleBtn_Click);
             // 
             // sqLiteCommand1
             // 

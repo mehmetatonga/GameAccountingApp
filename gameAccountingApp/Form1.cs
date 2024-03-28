@@ -22,7 +22,7 @@ namespace gameAccountingApp
         public void PazarSatisListele()
         {
             //string sql = "Select * from pazarSatis";
-            string sql = "Select id,Date,NickId,UrunId,Adet,PazarFiyati,NetFiyat from pazarSatis";
+            string sql = "Select pazarSatis.id,pazarSatis.Date,KullaniciAdi.Nick,pazarSatis.UrunId,pazarSatis.Adet,pazarSatis.PazarFiyati,pazarSatis.NetFiyat from pazarSatis INNER JOIN KullaniciAdi on pazarSatis.NickId=KullaniciAdi.id"; //İki inner join birden yazmak lazım onun çözümünü bul.
             PazarSatisGridWiew.DataSource = CRUD.Listele(sql);
         }
         public void EldenSatisListele()
@@ -55,7 +55,7 @@ namespace gameAccountingApp
         {
             int seciliId = Convert.ToInt32(PazarSatisGridWiew.CurrentRow.Cells["id"].Value.ToString());
             PazarSatisEklemeForm frm = new PazarSatisEklemeForm(seciliId);
-            frm.SaticicomboBox.Text = PazarSatisGridWiew.CurrentRow.Cells["NickId"].Value.ToString();
+            frm.SaticicomboBox.Text = PazarSatisGridWiew.CurrentRow.Cells["Nick"].Value.ToString();
             frm.UruncomboBox.Text = PazarSatisGridWiew.CurrentRow.Cells["UrunId"].Value.ToString();
             frm.MiktartextBox.Text = PazarSatisGridWiew.CurrentRow.Cells["Adet"].Value.ToString();
             frm.PazarFiyatitextBox.Text = PazarSatisGridWiew.CurrentRow.Cells["PazarFiyati"].Value.ToString();
@@ -130,6 +130,18 @@ namespace gameAccountingApp
                     GbSatisListele();
                 }
             }
+        }
+
+        private void UrunEkleBtn_Click(object sender, EventArgs e)
+        {
+            SatilacakEsyaEkleForm frm = new SatilacakEsyaEkleForm();
+            frm.ShowDialog();
+        }
+
+        private void KullaniciEkleBtn_Click(object sender, EventArgs e)
+        {
+            KullaniciEkleForm frm = new KullaniciEkleForm();
+            frm.ShowDialog();
         }
     }
 }

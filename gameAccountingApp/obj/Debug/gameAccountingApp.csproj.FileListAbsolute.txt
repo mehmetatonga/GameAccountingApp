@@ -20,3 +20,5 @@ C:\Users\mehme\Desktop\Kod Örnekleri\GameAccountingApp\gameAccountingApp\obj\De
 C:\Users\mehme\Desktop\Kod Örnekleri\GameAccountingApp\gameAccountingApp\obj\Debug\gameAccountingApp.PazarSatisEklemeForm.resources
 C:\Users\mehme\Desktop\Kod Örnekleri\GameAccountingApp\gameAccountingApp\obj\Debug\gameAccountingApp.EldenSatisEklemeForm.resources
 C:\Users\mehme\Desktop\Kod Örnekleri\GameAccountingApp\gameAccountingApp\obj\Debug\gameAccountingApp.GBSatisEkleForm.resources
+C:\Users\mehme\Desktop\Kod Örnekleri\GameAccountingApp\gameAccountingApp\obj\Debug\gameAccountingApp.KullaniciEkleForm.resources
+C:\Users\mehme\Desktop\Kod Örnekleri\GameAccountingApp\gameAccountingApp\obj\Debug\gameAccountingApp.SatilacakEsyaEkleForm.resources

@@ -85,6 +85,12 @@
     <Compile Include="GBSatisEkleForm.Designer.cs">
       <DependentUpon>GBSatisEkleForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="KullaniciEkleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KullaniciEkleForm.Designer.cs">
+      <DependentUpon>KullaniciEkleForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PazarSatisEklemeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SatilacakEsyaEkleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SatilacakEsyaEkleForm.Designer.cs">
+      <DependentUpon>SatilacakEsyaEkleForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="EldenSatisEklemeForm.resx">
       <DependentUpon>EldenSatisEklemeForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GBSatisEkleForm.resx">
       <DependentUpon>GBSatisEkleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KullaniciEkleForm.resx">
+      <DependentUpon>KullaniciEkleForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PazarSatisEklemeForm.resx">
       <DependentUpon>PazarSatisEklemeForm.cs</DependentUpon>
@@ -114,6 +129,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SatilacakEsyaEkleForm.resx">
+      <DependentUpon>SatilacakEsyaEkleForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
