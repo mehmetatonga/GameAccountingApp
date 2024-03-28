@@ -18,6 +18,22 @@ namespace gameAccountingApp
             adtr.Fill(dt);
             return dt;
         }
+        public static bool ESG(string sql)
+        {
+            int dogrula = 0;
+            SQLiteCommand command = new SQLiteCommand(sql,Baglan.Connection);
+            Baglan.Connection.Open();
+            dogrula = command.ExecuteNonQuery();
+            Baglan.Connection.Close();
+            if (dogrula==0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
 
     }
 }

@@ -2,7 +2,6 @@ C:\Users\mehme\Desktop\Kod Örnekleri\GameAccountingApp\gameAccountingApp\bin\De
 C:\Users\mehme\Desktop\Kod Örnekleri\GameAccountingApp\gameAccountingApp\bin\Debug\gameAccountingApp.exe
 C:\Users\mehme\Desktop\Kod Örnekleri\GameAccountingApp\gameAccountingApp\bin\Debug\gameAccountingApp.pdb
 C:\Users\mehme\Desktop\Kod Örnekleri\GameAccountingApp\gameAccountingApp\obj\Debug\gameAccountingApp.csproj.AssemblyReference.cache
-C:\Users\mehme\Desktop\Kod Örnekleri\GameAccountingApp\gameAccountingApp\obj\Debug\gameAccountingApp.Form1.resources
 C:\Users\mehme\Desktop\Kod Örnekleri\GameAccountingApp\gameAccountingApp\obj\Debug\gameAccountingApp.Properties.Resources.resources
 C:\Users\mehme\Desktop\Kod Örnekleri\GameAccountingApp\gameAccountingApp\obj\Debug\gameAccountingApp.csproj.GenerateResource.cache
 C:\Users\mehme\Desktop\Kod Örnekleri\GameAccountingApp\gameAccountingApp\obj\Debug\gameAccountingApp.csproj.CoreCompileInputs.cache
@@ -19,3 +18,5 @@ C:\Users\mehme\Desktop\Kod Örnekleri\GameAccountingApp\gameAccountingApp\bin\De
 C:\Users\mehme\Desktop\Kod Örnekleri\GameAccountingApp\gameAccountingApp\obj\Debug\gameAccountingApp.csproj.CopyComplete
 C:\Users\mehme\Desktop\Kod Örnekleri\GameAccountingApp\gameAccountingApp\obj\Debug\gameAccountingApp.GameAccountingAppForm.resources
 C:\Users\mehme\Desktop\Kod Örnekleri\GameAccountingApp\gameAccountingApp\obj\Debug\gameAccountingApp.PazarSatisEklemeForm.resources
+C:\Users\mehme\Desktop\Kod Örnekleri\GameAccountingApp\gameAccountingApp\obj\Debug\gameAccountingApp.EldenSatisEklemeForm.resources
+C:\Users\mehme\Desktop\Kod Örnekleri\GameAccountingApp\gameAccountingApp\obj\Debug\gameAccountingApp.GBSatisEkleForm.resources
