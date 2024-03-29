@@ -60,6 +60,17 @@
             this.PazarcıGuncelleBtn = new System.Windows.Forms.Button();
             this.PazarcıDataGridView1 = new System.Windows.Forms.DataGridView();
             this.PazarciSilBtn = new System.Windows.Forms.Button();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.KarLabel = new System.Windows.Forms.Label();
+            this.KarHesaplabutton1 = new System.Windows.Forms.Button();
+            this.GbSatistextBox4 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.PazardanGelenParatextBox3 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.RocotextBox2 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.RPRtextBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GbSatisGridWiew)).BeginInit();
@@ -70,6 +81,7 @@
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PazarcıDataGridView1)).BeginInit();
+            this.tabPage6.SuspendLayout();
             this.SuspendLayout();
             // 
             // UrunEkleBtn
@@ -393,6 +405,7 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
@@ -465,6 +478,121 @@
             this.PazarciSilBtn.UseVisualStyleBackColor = false;
             this.PazarciSilBtn.Click += new System.EventHandler(this.PazarciSilBtn_Click);
             // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.KarLabel);
+            this.tabPage6.Controls.Add(this.KarHesaplabutton1);
+            this.tabPage6.Controls.Add(this.GbSatistextBox4);
+            this.tabPage6.Controls.Add(this.label7);
+            this.tabPage6.Controls.Add(this.PazardanGelenParatextBox3);
+            this.tabPage6.Controls.Add(this.label6);
+            this.tabPage6.Controls.Add(this.RocotextBox2);
+            this.tabPage6.Controls.Add(this.label4);
+            this.tabPage6.Controls.Add(this.RPRtextBox1);
+            this.tabPage6.Controls.Add(this.label2);
+            this.tabPage6.Location = new System.Drawing.Point(4, 34);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(1872, 900);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Kar Hesaplama";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // KarLabel
+            // 
+            this.KarLabel.AutoSize = true;
+            this.KarLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.KarLabel.Location = new System.Drawing.Point(778, 575);
+            this.KarLabel.Name = "KarLabel";
+            this.KarLabel.Size = new System.Drawing.Size(105, 37);
+            this.KarLabel.TabIndex = 14;
+            this.KarLabel.Text = "KAR: ";
+            // 
+            // KarHesaplabutton1
+            // 
+            this.KarHesaplabutton1.BackColor = System.Drawing.Color.LimeGreen;
+            this.KarHesaplabutton1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.KarHesaplabutton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.KarHesaplabutton1.Location = new System.Drawing.Point(3, 857);
+            this.KarHesaplabutton1.Name = "KarHesaplabutton1";
+            this.KarHesaplabutton1.Size = new System.Drawing.Size(1866, 40);
+            this.KarHesaplabutton1.TabIndex = 13;
+            this.KarHesaplabutton1.Text = "Hesapla";
+            this.KarHesaplabutton1.UseVisualStyleBackColor = false;
+            this.KarHesaplabutton1.Click += new System.EventHandler(this.KarHesaplabutton1_Click);
+            // 
+            // GbSatistextBox4
+            // 
+            this.GbSatistextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.GbSatistextBox4.Location = new System.Drawing.Point(913, 430);
+            this.GbSatistextBox4.Name = "GbSatistextBox4";
+            this.GbSatistextBox4.Size = new System.Drawing.Size(401, 44);
+            this.GbSatistextBox4.TabIndex = 10;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(674, 437);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(171, 37);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "GB Satış: ";
+            // 
+            // PazardanGelenParatextBox3
+            // 
+            this.PazardanGelenParatextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.PazardanGelenParatextBox3.Location = new System.Drawing.Point(913, 333);
+            this.PazardanGelenParatextBox3.Name = "PazardanGelenParatextBox3";
+            this.PazardanGelenParatextBox3.Size = new System.Drawing.Size(401, 44);
+            this.PazardanGelenParatextBox3.TabIndex = 8;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(481, 340);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(364, 37);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Pazardan Gelen Para: ";
+            // 
+            // RocotextBox2
+            // 
+            this.RocotextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.RocotextBox2.Location = new System.Drawing.Point(913, 250);
+            this.RocotextBox2.Name = "RocotextBox2";
+            this.RocotextBox2.Size = new System.Drawing.Size(401, 44);
+            this.RocotextBox2.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(588, 257);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(257, 37);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Roco TL Fiyatı: ";
+            // 
+            // RPRtextBox1
+            // 
+            this.RPRtextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.RPRtextBox1.Location = new System.Drawing.Point(913, 161);
+            this.RPRtextBox1.Name = "RPRtextBox1";
+            this.RPRtextBox1.Size = new System.Drawing.Size(401, 44);
+            this.RPRtextBox1.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(740, 164);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(105, 37);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "RPR: ";
+            // 
             // EldenSatisLbl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -488,6 +616,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PazarcıDataGridView1)).EndInit();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -525,6 +655,17 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label PazarSatisLbl;
         private System.Windows.Forms.Button ToplamHesaplaBtn;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TextBox GbSatistextBox4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox PazardanGelenParatextBox3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox RocotextBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox RPRtextBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label KarLabel;
+        private System.Windows.Forms.Button KarHesaplabutton1;
     }
 }
 
