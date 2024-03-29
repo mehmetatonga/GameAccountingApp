@@ -183,6 +183,7 @@
             this.Name = "PazarSatisEklemeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pazar Satışı Ekle";
+            this.Load += new System.EventHandler(this.PazarSatisEklemeForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

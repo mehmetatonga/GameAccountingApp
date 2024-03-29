@@ -12,18 +12,35 @@ namespace gameAccountingApp
 {
     public partial class KullaniciEkleForm : Form
     {
-        public KullaniciEkleForm()
+        int? id = null;
+        public KullaniciEkleForm(int? Id = null)
         {
             InitializeComponent();
+            if (Id != null)
+            {
+                this.id = Id;
+            }
         }
 
         private void NickKaydetBtn_Click(object sender, EventArgs e)
         {
-            string sql = "Insert into KullaniciAdi(Nick) Values('" + NicktextBox.Text + "')";
-            if (CRUD.ESG(sql))
+            if (id == null)
             {
-                MessageBox.Show("Ekleme İşlemi Başarılı!");
-                this.Close();
+                string sql = "Insert into KullaniciAdi(Nick,Email) Values('" + NicktextBox.Text + "','" + EMailtextBox.Text + "')";
+                if (CRUD.ESG(sql))
+                {
+                    MessageBox.Show("Ekleme İşlemi Başarılı!");
+                    this.Close();
+                }
+            }
+            else
+            {
+                string sql = "Update KullaniciAdi set Nick='" + NicktextBox.Text + "',Email='" + EMailtextBox.Text + "'Where id='" + id + "'";
+                if (CRUD.ESG(sql))
+                {
+                    MessageBox.Show("Güncelleme İşlemi Başarılı!");
+                    this.Close();
+                }
             }
         }
     }

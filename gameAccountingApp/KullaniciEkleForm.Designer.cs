@@ -34,18 +34,22 @@
             this.NicktextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.EMailtextBox = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.EMailtextBox);
             this.panel2.Controls.Add(this.NickKaydetBtn);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.NicktextBox);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 94);
+            this.panel2.Location = new System.Drawing.Point(0, 80);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(318, 138);
+            this.panel2.Size = new System.Drawing.Size(318, 199);
             this.panel2.TabIndex = 11;
             // 
             // NickKaydetBtn
@@ -53,7 +57,7 @@
             this.NickKaydetBtn.BackColor = System.Drawing.Color.LimeGreen;
             this.NickKaydetBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.NickKaydetBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.NickKaydetBtn.Location = new System.Drawing.Point(0, 83);
+            this.NickKaydetBtn.Location = new System.Drawing.Point(0, 144);
             this.NickKaydetBtn.Name = "NickKaydetBtn";
             this.NickKaydetBtn.Size = new System.Drawing.Size(318, 55);
             this.NickKaydetBtn.TabIndex = 9;
@@ -85,7 +89,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(318, 232);
+            this.label1.Size = new System.Drawing.Size(318, 279);
             this.label1.TabIndex = 10;
             this.label1.Text = "Pazar Satışı Ekle";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -96,16 +100,34 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.Location = new System.Drawing.Point(0, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(318, 94);
+            this.label6.Size = new System.Drawing.Size(318, 80);
             this.label6.TabIndex = 12;
             this.label6.Text = "Kullanıcı Ekle";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(39, 87);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 25);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "EMail:";
+            // 
+            // EMailtextBox
+            // 
+            this.EMailtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.EMailtextBox.Location = new System.Drawing.Point(141, 86);
+            this.EMailtextBox.Name = "EMailtextBox";
+            this.EMailtextBox.Size = new System.Drawing.Size(139, 26);
+            this.EMailtextBox.TabIndex = 10;
             // 
             // KullaniciEkleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(318, 232);
+            this.ClientSize = new System.Drawing.Size(318, 279);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
@@ -126,5 +148,7 @@
         public System.Windows.Forms.TextBox NicktextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.TextBox EMailtextBox;
     }
 }

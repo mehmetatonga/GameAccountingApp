@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -27,7 +28,26 @@ namespace gameAccountingApp
             if (id == null)
             {
                 DateTime dateTime = DateTime.Now;
-                string sql = "Insert into EldenSatis(NickId,Date,UrunId,Adet,NetFiyat) Values('" + SaticicomboBox.Text + "','" + dateTime.ToShortDateString() + "','" + UruncomboBox.Text + "','" + MiktartextBox.Text + "','" + PazarFiyatitextBox.Text + "')";
+
+                Baglan.Connection.Open();
+                string nick = SaticicomboBox.Text;
+                string query = "Select id FROM KullaniciAdi WHERE Nick = @Nick";//DİKKAT nick
+                SQLiteCommand command = new SQLiteCommand(query, Baglan.Connection);
+                command.Parameters.Add(new SQLiteParameter("@Nick", nick));
+                object result = command.ExecuteScalar();
+                int KullaniciId = Convert.ToInt32(result);
+                Baglan.Connection.Close();
+
+                Baglan.Connection.Open();
+                string urunAdi = UruncomboBox.Text;
+                string query2 = "Select id FROM SatilacakUrunler WHERE UrunAdi = @UrunAdi";
+                SQLiteCommand command2 = new SQLiteCommand(query2, Baglan.Connection);
+                command2.Parameters.Add(new SQLiteParameter("@UrunAdi", urunAdi));
+                object result2 = command2.ExecuteScalar();
+                int UrunId = Convert.ToInt32(result2);
+                Baglan.Connection.Close();
+
+                string sql = "Insert into EldenSatis(NickId,Date,UrunId,Adet,NetFiyat) Values('" + KullaniciId + "','" + dateTime.ToShortDateString() + "','" + UrunId + "','" + MiktartextBox.Text + "','" + PazarFiyatitextBox.Text + "')";
                 if (CRUD.ESG(sql))
                 {
                     MessageBox.Show("Ekleme İşlemi Başarılı!");
@@ -37,13 +57,51 @@ namespace gameAccountingApp
             else
             {
                 DateTime dateTime = DateTime.Now;
-                string sql = "Update EldenSatis set NickId='" + SaticicomboBox.Text + "',UrunId='" + UruncomboBox.Text + "',Adet='" + MiktartextBox.Text + "',NetFiyat='" + PazarFiyatitextBox.Text + "'Where id='" + id + "'";
+
+                Baglan.Connection.Open();
+                string nick = SaticicomboBox.Text;
+                string query = "Select id FROM KullaniciAdi WHERE Nick = @Nick";//DİKKAT nick
+                SQLiteCommand command = new SQLiteCommand(query, Baglan.Connection);
+                command.Parameters.Add(new SQLiteParameter("@Nick", nick));
+                object result = command.ExecuteScalar();
+                int KullaniciId = Convert.ToInt32(result);
+                Baglan.Connection.Close();
+
+                Baglan.Connection.Open();
+                string urunAdi = UruncomboBox.Text;
+                string query2 = "Select id FROM SatilacakUrunler WHERE UrunAdi = @UrunAdi";
+                SQLiteCommand command2 = new SQLiteCommand(query2, Baglan.Connection);
+                command2.Parameters.Add(new SQLiteParameter("@UrunAdi", urunAdi));
+                object result2 = command2.ExecuteScalar();
+                int UrunId = Convert.ToInt32(result2);
+                Baglan.Connection.Close();
+
+                string sql = "Update EldenSatis set NickId='" + KullaniciId + "',UrunId='" + UrunId + "',Adet='" + MiktartextBox.Text + "',NetFiyat='" + PazarFiyatitextBox.Text + "'Where id='" + id + "'";
                 if (CRUD.ESG(sql))
                 {
                     MessageBox.Show("Güncelleme İşlemi Başarılı!");
                     this.Close();
                 }
             }
+        }
+
+        private void EldenSatisEklemeForm_Load(object sender, EventArgs e)
+        {
+            SQLiteCommand command = new SQLiteCommand("SELECT * FROM KullaniciAdi", Baglan.Connection);
+            SQLiteCommand command2 = new SQLiteCommand("SELECT * FROM SatilacakUrunler", Baglan.Connection);
+            SQLiteDataReader dr, dr2;
+            Baglan.Connection.Open();
+            dr = command.ExecuteReader();
+            dr2 = command2.ExecuteReader();
+            while (dr.Read())
+            {
+                SaticicomboBox.Items.Add(dr["Nick"]);
+            }
+            while (dr2.Read())
+            {
+                UruncomboBox.Items.Add(dr2["UrunAdi"]);
+            }
+            Baglan.Connection.Close();
         }
     }
 }

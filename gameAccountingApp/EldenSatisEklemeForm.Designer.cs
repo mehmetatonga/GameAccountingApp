@@ -169,6 +169,7 @@
             this.Name = "EldenSatisEklemeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Elden Satış Ekle";
+            this.Load += new System.EventHandler(this.EldenSatisEklemeForm_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
