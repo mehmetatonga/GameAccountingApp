@@ -1,6 +1,6 @@
 ﻿namespace gameAccountingApp
 {
-    partial class GameAccountingAppForm
+    partial class EldenSatisLbl
     {
         /// <summary>
         /// Required designer variable.
@@ -31,6 +31,14 @@
             this.UrunEkleBtn = new System.Windows.Forms.Button();
             this.sqLiteCommand1 = new System.Data.SQLite.SQLiteCommand();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.ToplamHesaplaBtn = new System.Windows.Forms.Button();
+            this.DatecomboBox1 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.ToplamSatisLbl = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.PazarSatisLbl = new System.Windows.Forms.Label();
+            this.PazarCharcomboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.GBSatisiEkleBtn = new System.Windows.Forms.Button();
             this.GBSatisiGuncelleBtn = new System.Windows.Forms.Button();
@@ -52,14 +60,6 @@
             this.PazarcıGuncelleBtn = new System.Windows.Forms.Button();
             this.PazarcıDataGridView1 = new System.Windows.Forms.DataGridView();
             this.PazarciSilBtn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.PazarCharcomboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.DatecomboBox1 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GbSatisGridWiew)).BeginInit();
@@ -91,12 +91,12 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.button1);
+            this.tabPage4.Controls.Add(this.ToplamHesaplaBtn);
             this.tabPage4.Controls.Add(this.DatecomboBox1);
             this.tabPage4.Controls.Add(this.label5);
-            this.tabPage4.Controls.Add(this.label4);
+            this.tabPage4.Controls.Add(this.ToplamSatisLbl);
             this.tabPage4.Controls.Add(this.label3);
-            this.tabPage4.Controls.Add(this.label2);
+            this.tabPage4.Controls.Add(this.PazarSatisLbl);
             this.tabPage4.Controls.Add(this.PazarCharcomboBox1);
             this.tabPage4.Controls.Add(this.label1);
             this.tabPage4.Location = new System.Drawing.Point(4, 34);
@@ -106,6 +106,87 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Toplam Satış";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // ToplamHesaplaBtn
+            // 
+            this.ToplamHesaplaBtn.BackColor = System.Drawing.Color.LimeGreen;
+            this.ToplamHesaplaBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ToplamHesaplaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ToplamHesaplaBtn.Location = new System.Drawing.Point(3, 857);
+            this.ToplamHesaplaBtn.Name = "ToplamHesaplaBtn";
+            this.ToplamHesaplaBtn.Size = new System.Drawing.Size(1866, 40);
+            this.ToplamHesaplaBtn.TabIndex = 12;
+            this.ToplamHesaplaBtn.Text = "Hesapla";
+            this.ToplamHesaplaBtn.UseVisualStyleBackColor = false;
+            this.ToplamHesaplaBtn.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // DatecomboBox1
+            // 
+            this.DatecomboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.DatecomboBox1.FormattingEnabled = true;
+            this.DatecomboBox1.Location = new System.Drawing.Point(852, 285);
+            this.DatecomboBox1.Name = "DatecomboBox1";
+            this.DatecomboBox1.Size = new System.Drawing.Size(401, 45);
+            this.DatecomboBox1.TabIndex = 6;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(723, 293);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(108, 37);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Date: ";
+            // 
+            // ToplamSatisLbl
+            // 
+            this.ToplamSatisLbl.AutoSize = true;
+            this.ToplamSatisLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ToplamSatisLbl.Location = new System.Drawing.Point(594, 561);
+            this.ToplamSatisLbl.Name = "ToplamSatisLbl";
+            this.ToplamSatisLbl.Size = new System.Drawing.Size(237, 37);
+            this.ToplamSatisLbl.TabIndex = 4;
+            this.ToplamSatisLbl.Text = "Toplam Satış: ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(622, 480);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(209, 37);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Elden Satış: ";
+            // 
+            // PazarSatisLbl
+            // 
+            this.PazarSatisLbl.AutoSize = true;
+            this.PazarSatisLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.PazarSatisLbl.Location = new System.Drawing.Point(619, 390);
+            this.PazarSatisLbl.Name = "PazarSatisLbl";
+            this.PazarSatisLbl.Size = new System.Drawing.Size(212, 37);
+            this.PazarSatisLbl.TabIndex = 2;
+            this.PazarSatisLbl.Text = "Pazar Satış: ";
+            // 
+            // PazarCharcomboBox1
+            // 
+            this.PazarCharcomboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.PazarCharcomboBox1.FormattingEnabled = true;
+            this.PazarCharcomboBox1.Location = new System.Drawing.Point(852, 197);
+            this.PazarCharcomboBox1.Name = "PazarCharcomboBox1";
+            this.PazarCharcomboBox1.Size = new System.Drawing.Size(401, 45);
+            this.PazarCharcomboBox1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(621, 205);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(210, 37);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Pazar Char: ";
             // 
             // tabPage3
             // 
@@ -384,87 +465,7 @@
             this.PazarciSilBtn.UseVisualStyleBackColor = false;
             this.PazarciSilBtn.Click += new System.EventHandler(this.PazarciSilBtn_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(621, 205);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(210, 37);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Pazar Char: ";
-            // 
-            // PazarCharcomboBox1
-            // 
-            this.PazarCharcomboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.PazarCharcomboBox1.FormattingEnabled = true;
-            this.PazarCharcomboBox1.Location = new System.Drawing.Point(852, 197);
-            this.PazarCharcomboBox1.Name = "PazarCharcomboBox1";
-            this.PazarCharcomboBox1.Size = new System.Drawing.Size(401, 45);
-            this.PazarCharcomboBox1.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(619, 390);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(212, 37);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Pazar Satış: ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(622, 480);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(209, 37);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Elden Satış: ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(594, 561);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(237, 37);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Toplam Satış: ";
-            // 
-            // DatecomboBox1
-            // 
-            this.DatecomboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.DatecomboBox1.FormattingEnabled = true;
-            this.DatecomboBox1.Location = new System.Drawing.Point(852, 285);
-            this.DatecomboBox1.Name = "DatecomboBox1";
-            this.DatecomboBox1.Size = new System.Drawing.Size(401, 45);
-            this.DatecomboBox1.TabIndex = 6;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(723, 293);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 37);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Date: ";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.LimeGreen;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(3, 857);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(1866, 40);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Hesapla";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // GameAccountingAppForm
+            // EldenSatisLbl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -472,7 +473,7 @@
             this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.UrunEkleBtn);
-            this.Name = "GameAccountingAppForm";
+            this.Name = "EldenSatisLbl";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "-";
             this.Load += new System.EventHandler(this.GameAccountingAppForm_Load);
@@ -520,10 +521,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox DatecomboBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label ToplamSatisLbl;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label PazarSatisLbl;
+        private System.Windows.Forms.Button ToplamHesaplaBtn;
     }
 }
 

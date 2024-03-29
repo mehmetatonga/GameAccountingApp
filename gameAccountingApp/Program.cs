@@ -16,7 +16,7 @@ namespace gameAccountingApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GameAccountingAppForm());
+            Application.Run(new EldenSatisLbl());
         }
     }
 }

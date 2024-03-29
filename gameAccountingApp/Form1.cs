@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace gameAccountingApp
 {
-    public partial class GameAccountingAppForm : Form
+    public partial class EldenSatisLbl : Form
     {
-        public GameAccountingAppForm()
+        public EldenSatisLbl()
         {
             InitializeComponent();
             PazarSatisListele();
@@ -102,8 +102,8 @@ namespace gameAccountingApp
         {
             int seciliId = Convert.ToInt32(EldenSatisGridWiew.CurrentRow.Cells["id"].Value.ToString());
             EldenSatisEklemeForm frm = new EldenSatisEklemeForm(seciliId);
-            frm.SaticicomboBox.Text = EldenSatisGridWiew.CurrentRow.Cells["NickId"].Value.ToString();
-            frm.UruncomboBox.Text = EldenSatisGridWiew.CurrentRow.Cells["UrunId"].Value.ToString();
+            frm.SaticicomboBox.Text = EldenSatisGridWiew.CurrentRow.Cells["Nick"].Value.ToString();
+            frm.UruncomboBox.Text = EldenSatisGridWiew.CurrentRow.Cells["UrunAdi"].Value.ToString();
             frm.MiktartextBox.Text = EldenSatisGridWiew.CurrentRow.Cells["Adet"].Value.ToString();
             frm.PazarFiyatitextBox.Text = EldenSatisGridWiew.CurrentRow.Cells["NetFiyat"].Value.ToString();
             frm.ShowDialog();
@@ -184,7 +184,7 @@ namespace gameAccountingApp
         private void GameAccountingAppForm_Load(object sender, EventArgs e)
         {
             SQLiteCommand command = new SQLiteCommand("SELECT * FROM KullaniciAdi", Baglan.Connection);
-            SQLiteCommand command2 = new SQLiteCommand("SELECT DISTINCT Date FROM PazarSatis", Baglan.Connection);
+            SQLiteCommand command2 = new SQLiteCommand("SELECT DISTINCT Date FROM (SELECT Date FROM PazarSatis UNION SELECT Date FROM EldenSatis) AS CombinedDates", Baglan.Connection);
             SQLiteDataReader dr,dr2;
             Baglan.Connection.Open();
             dr = command.ExecuteReader();
@@ -198,6 +198,30 @@ namespace gameAccountingApp
                 DatecomboBox1.Items.Add(dr2["Date"]);
             }
             Baglan.Connection.Close();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Baglan.Connection.Open();
+            string nick = PazarCharcomboBox1.Text;
+            string query = "Select id FROM KullaniciAdi WHERE Nick = @Nick";//DİKKAT nick
+            SQLiteCommand command = new SQLiteCommand(query, Baglan.Connection);
+            command.Parameters.Add(new SQLiteParameter("@Nick", nick));
+            object result = command.ExecuteScalar();
+            int KullaniciId = Convert.ToInt32(result);
+
+            string query2 = "SELECT NetFiyat FROM pazarSatis WHERE NickId = @NickId";
+            SQLiteCommand command2 = new SQLiteCommand(query2, Baglan.Connection);
+            command2.Parameters.Add(new SQLiteParameter("@NickId", KullaniciId));
+            SQLiteDataReader reader = command2.ExecuteReader();
+            double toplamNetFiyat = 0; //BURDA KALDIN ATAMA YAPAMIYOR!!!!!
+            while (reader.Read()) 
+            {
+                toplamNetFiyat += reader.GetDouble(0);
+            }
+            Baglan.Connection.Close();
+            PazarSatisLbl.Text = "Pazar Satış: "+toplamNetFiyat.ToString();
+
         }
     }
 }
