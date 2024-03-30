@@ -31,7 +31,7 @@ namespace gameAccountingApp
 
                 Baglan.Connection.Open();
                 string nick = SaticicomboBox.Text;
-                string query = "Select id FROM KullaniciAdi WHERE Nick = @Nick";//DİKKAT nick
+                string query = "Select id FROM KullaniciAdi WHERE Nick = @Nick";
                 SQLiteCommand command = new SQLiteCommand(query, Baglan.Connection);
                 command.Parameters.Add(new SQLiteParameter("@Nick", nick));
                 object result = command.ExecuteScalar();
@@ -47,7 +47,8 @@ namespace gameAccountingApp
                 int UrunId = Convert.ToInt32(result2);
                 Baglan.Connection.Close();
 
-                string sql = "Insert into EldenSatis(NickId,Date,UrunId,Adet,NetFiyat) Values('" + KullaniciId + "','" + dateTime.ToShortDateString() + "','" + UrunId + "','" + MiktartextBox.Text + "','" + PazarFiyatitextBox.Text + "')";
+                float ToplamMiktar = float.Parse(MiktartextBox.Text)* float.Parse(PazarFiyatitextBox.Text);
+                string sql = "Insert into EldenSatis(NickId,Date,UrunId,Adet,NetFiyat,ToplamFiyat) Values('" + KullaniciId + "','" + dateTime.ToShortDateString() + "','" + UrunId + "','" + MiktartextBox.Text + "','" + PazarFiyatitextBox.Text + "','"+ ToplamMiktar + "')";
                 if (CRUD.ESG(sql))
                 {
                     MessageBox.Show("Ekleme İşlemi Başarılı!");
@@ -60,7 +61,7 @@ namespace gameAccountingApp
 
                 Baglan.Connection.Open();
                 string nick = SaticicomboBox.Text;
-                string query = "Select id FROM KullaniciAdi WHERE Nick = @Nick";//DİKKAT nick
+                string query = "Select id FROM KullaniciAdi WHERE Nick = @Nick";
                 SQLiteCommand command = new SQLiteCommand(query, Baglan.Connection);
                 command.Parameters.Add(new SQLiteParameter("@Nick", nick));
                 object result = command.ExecuteScalar();
@@ -76,7 +77,8 @@ namespace gameAccountingApp
                 int UrunId = Convert.ToInt32(result2);
                 Baglan.Connection.Close();
 
-                string sql = "Update EldenSatis set NickId='" + KullaniciId + "',UrunId='" + UrunId + "',Adet='" + MiktartextBox.Text + "',NetFiyat='" + PazarFiyatitextBox.Text + "'Where id='" + id + "'";
+                float ToplamMiktar = float.Parse(MiktartextBox.Text) * float.Parse(PazarFiyatitextBox.Text);
+                string sql = "Update EldenSatis set NickId='" + KullaniciId + "',UrunId='" + UrunId + "',Adet='" + MiktartextBox.Text + "',NetFiyat='" + PazarFiyatitextBox.Text + "',ToplamFiyat='"+ ToplamMiktar + "'Where id='" + id + "'";
                 if (CRUD.ESG(sql))
                 {
                     MessageBox.Show("Güncelleme İşlemi Başarılı!");

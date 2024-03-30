@@ -26,13 +26,13 @@ namespace gameAccountingApp
         public void PazarSatisListele()
         {
             //string sql = "Select * from pazarSatis";
-            string sql = "Select pazarSatis.id,pazarSatis.Date,KullaniciAdi.Nick,SatilacakUrunler.UrunAdi,pazarSatis.Adet,pazarSatis.PazarFiyati,Cast(NetFiyat as varchar) as NetFiyat from pazarSatis INNER JOIN KullaniciAdi on pazarSatis.NickId=KullaniciAdi.id INNER JOIN SatilacakUrunler on pazarSatis.UrunId=SatilacakUrunler.id";
+            string sql = "Select pazarSatis.id as Id,pazarSatis.Date as Tarih,KullaniciAdi.Nick,SatilacakUrunler.UrunAdi as Ürünler,pazarSatis.Adet,pazarSatis.PazarFiyati as Fiyat,Cast(NetFiyat as varchar) as Tutar from pazarSatis INNER JOIN KullaniciAdi on pazarSatis.NickId=KullaniciAdi.id INNER JOIN SatilacakUrunler on pazarSatis.UrunId=SatilacakUrunler.id";
             PazarSatisGridWiew.DataSource = CRUD.Listele(sql);
         }
         public void EldenSatisListele()
         {
             //string sql = "Select * from EldenSatis";
-            string sql = "Select EldenSatis.id,EldenSatis.Date,KullaniciAdi.Nick,SatilacakUrunler.UrunAdi,EldenSatis.Adet,EldenSatis.NetFiyat from EldenSatis INNER JOIN KullaniciAdi on EldenSatis.NickId=KullaniciAdi.id INNER JOIN SatilacakUrunler on EldenSatis.UrunId=SatilacakUrunler.id";
+            string sql = "Select EldenSatis.id,EldenSatis.Date,KullaniciAdi.Nick,SatilacakUrunler.UrunAdi,EldenSatis.Adet,EldenSatis.NetFiyat,EldenSatis.ToplamFiyat from EldenSatis INNER JOIN KullaniciAdi on EldenSatis.NickId=KullaniciAdi.id INNER JOIN SatilacakUrunler on EldenSatis.UrunId=SatilacakUrunler.id";
             EldenSatisGridWiew.DataSource = CRUD.Listele(sql);
         }
         public void GbSatisListele()
@@ -152,12 +152,14 @@ namespace gameAccountingApp
         {
             KullaniciEkleForm frm = new KullaniciEkleForm();
             frm.ShowDialog();
+            PazarciListele();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             KullaniciEkleForm frm = new KullaniciEkleForm();
             frm.ShowDialog();
+            PazarciListele();
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -185,6 +187,12 @@ namespace gameAccountingApp
 
         private void GameAccountingAppForm_Load(object sender, EventArgs e)
         {
+            tabControl1.Visible = false;
+            UrunEkleBtn.Visible = false;
+            //this.TransparencyKey = Color.White;
+            this.TransparencyKey = this.BackColor;
+            //this.BackColor = Color.White;
+            this.FormBorderStyle = FormBorderStyle.None;
             SQLiteCommand command = new SQLiteCommand("SELECT * FROM KullaniciAdi", Baglan.Connection);
             SQLiteCommand command2 = new SQLiteCommand("SELECT DISTINCT Date FROM (SELECT Date FROM PazarSatis UNION SELECT Date FROM EldenSatis) AS CombinedDates", Baglan.Connection);
             SQLiteDataReader dr,dr2;
@@ -265,6 +273,16 @@ namespace gameAccountingApp
             float ustToplam = float.Parse(RPRtextBox1.Text) * float.Parse(RocotextBox2.Text);
             float karToplam = altToplam - ustToplam;
             KarLabel.Text = "KAR: "+ karToplam.ToString("N", CultureInfo.GetCultureInfo("tr-TR"));
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Visible = false;
+            tabControl1.Visible = true;
+            UrunEkleBtn.Visible = true;
+            this.TransparencyKey = Color.Cyan;
+            //this.BackColor = Color.DarkGray;
+            this.FormBorderStyle = FormBorderStyle.Sizable;
         }
     }
 }

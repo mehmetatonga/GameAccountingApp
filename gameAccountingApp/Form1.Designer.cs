@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EldenSatisLbl));
             this.UrunEkleBtn = new System.Windows.Forms.Button();
             this.sqLiteCommand1 = new System.Data.SQLite.SQLiteCommand();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -61,6 +62,10 @@
             this.PazarcıDataGridView1 = new System.Windows.Forms.DataGridView();
             this.PazarciSilBtn = new System.Windows.Forms.Button();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.KarLabel = new System.Windows.Forms.Label();
             this.KarHesaplabutton1 = new System.Windows.Forms.Button();
             this.GbSatistextBox4 = new System.Windows.Forms.TextBox();
@@ -71,10 +76,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.RPRtextBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GbSatisGridWiew)).BeginInit();
@@ -86,6 +88,7 @@
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PazarcıDataGridView1)).BeginInit();
             this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // UrunEkleBtn
@@ -506,6 +509,46 @@
             this.tabPage6.Text = "Kar Hesaplama";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.Location = new System.Drawing.Point(1251, 518);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(57, 37);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "TL";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.Location = new System.Drawing.Point(1251, 432);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(89, 37);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "Gold";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.Location = new System.Drawing.Point(1251, 349);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(57, 37);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "TL";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(1251, 260);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(116, 37);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "ROCO";
+            // 
             // KarLabel
             // 
             this.KarLabel.AutoSize = true;
@@ -601,45 +644,16 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Ürün: ";
             // 
-            // label3
+            // pictureBox1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(1251, 260);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 37);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "ROCO";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(1251, 349);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 37);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "TL";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(1251, 432);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(89, 37);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "Gold";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(1251, 518);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(57, 37);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "TL";
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1880, 1017);
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // EldenSatisLbl
             // 
@@ -649,9 +663,11 @@
             this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.UrunEkleBtn);
+            this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EldenSatisLbl";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "-";
+            this.Text = "NIGHTMARE";
             this.Load += new System.EventHandler(this.GameAccountingAppForm_Load);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
@@ -666,6 +682,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PazarcıDataGridView1)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -718,6 +735,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
