@@ -6,6 +6,7 @@ using System.Data.SQLite;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -211,45 +212,59 @@ namespace gameAccountingApp
             object result = command.ExecuteScalar();
             int KullaniciId = Convert.ToInt32(result);
 
-            //string query2 = "SELECT  NetFiyat FROM pazarSatis Where NickId=@nickId AND Date=@date";
-            //SQLiteCommand command2 = new SQLiteCommand(query2, Baglan.Connection);
-            //command2.Parameters.AddWithValue("@nickId", KullaniciId);
-            //command2.Parameters.AddWithValue("@date", DatecomboBox1.Text);
-            //SQLiteDataReader reader = command2.ExecuteReader();
-            //if (reader.Read())
-            //{
-            //    double netFiyat = reader.GetDouble(0);
-            //    PazarSatisLbl.Text = "Pazar Satış: "+netFiyat.ToString();
-            //}
-            //else
-            //{
-            //    PazarSatisLbl.Text = "Pazar Satış: 0";
-            //}
-            
-            string query2 = "SELECT  NetFiyat FROM pazarSatis Where NickId=@nickId AND Date=@date";
+            //PAZAR SATIŞ
+            string query2 = "SELECT PazarFiyati FROM pazarSatis Where NickId=@nickId AND Date=@date";
+            string query3 = "SELECT Adet FROM pazarSatis Where NickId=@nickId AND Date=@date";
             SQLiteCommand command2 = new SQLiteCommand(query2, Baglan.Connection);
+            SQLiteCommand command3 = new SQLiteCommand(query3, Baglan.Connection);
             command2.Parameters.AddWithValue("@nickId", KullaniciId);
             command2.Parameters.AddWithValue("@date", DatecomboBox1.Text);
+            command3.Parameters.AddWithValue("@nickId", KullaniciId);
+            command3.Parameters.AddWithValue("@date", DatecomboBox1.Text);
             SQLiteDataReader reader = command2.ExecuteReader();
-            float toplamNetFiyat = 0;
-
-            while (reader.Read())
+            SQLiteDataReader reader2 = command3.ExecuteReader();
+            double toplamNetFiyat = 0;
+            while (reader.Read() && reader2.Read())
             {
-                float NetFiyat = Convert.ToSingle(reader["NetFiyat"]);
-                toplamNetFiyat += NetFiyat;
+                double NetFiyat = Convert.ToDouble(reader["PazarFiyati"]);
+                double Adet = Convert.ToDouble(reader2["Adet"]);
+                toplamNetFiyat += NetFiyat*Adet;
             }
-            PazarSatisLbl.Text = "Pazar Satış: " + toplamNetFiyat.ToString("0,##", new CultureInfo("tr-TR")); //GPT ABİYE SOR
+            double sonFiyat = toplamNetFiyat * 98 / 100;
+            PazarSatisLbl.Text = "Pazar Satış: " + sonFiyat.ToString("N", CultureInfo.GetCultureInfo("tr-TR"));
 
+            //ELDEN SATIŞ
+            string query4 = "SELECT NetFiyat FROM EldenSatis Where NickId=@nickId AND Date=@date";
+            string query5 = "SELECT Adet FROM EldenSatis Where NickId=@nickId AND Date=@date";
+            SQLiteCommand command4 = new SQLiteCommand(query4, Baglan.Connection);
+            SQLiteCommand command5 = new SQLiteCommand(query5, Baglan.Connection);
+            command4.Parameters.AddWithValue("@nickId", KullaniciId);
+            command4.Parameters.AddWithValue("@date", DatecomboBox1.Text);
+            command5.Parameters.AddWithValue("@nickId", KullaniciId);
+            command5.Parameters.AddWithValue("@date", DatecomboBox1.Text);
+            SQLiteDataReader reader4 = command4.ExecuteReader();
+            SQLiteDataReader reader5 = command5.ExecuteReader();
+            double toplamNetFiyat2 = 0;
+            while (reader4.Read() && reader5.Read())
+            {
+                double NetFiyat = Convert.ToDouble(reader4["NetFiyat"]);
+                double Adet = Convert.ToDouble(reader5["Adet"]);
+                toplamNetFiyat2 += NetFiyat * Adet;
+            }
+            EldenSatislabel3.Text = "Elden Satış: " + toplamNetFiyat2.ToString("N", CultureInfo.GetCultureInfo("tr-TR"));
             Baglan.Connection.Close();
+            double toplamSonFiyat = sonFiyat + toplamNetFiyat2;
+            ToplamSatisLbl.Text = "Toplam Satış: " + toplamSonFiyat.ToString("N", CultureInfo.GetCultureInfo("tr-TR"));
             
         }
 
         private void KarHesaplabutton1_Click(object sender, EventArgs e)
         {
-            float altToplam = float.Parse(PazardanGelenParatextBox3.Text) + float.Parse(GbSatistextBox4.Text);
-            float ustToplam = float.Parse(RPRtextBox1.Text) + float.Parse(RocotextBox2.Text);
+            float pazardanGelenPara = float.Parse(PazardanGelenParatextBox3.Text)*98/100;
+            float altToplam = pazardanGelenPara / 1000000 * float.Parse(GbSatistextBox4.Text);
+            float ustToplam = float.Parse(RPRtextBox1.Text) * float.Parse(RocotextBox2.Text);
             float karToplam = altToplam - ustToplam;
-            KarLabel.Text = "KAR: "+ karToplam.ToString();
+            KarLabel.Text = "KAR: "+ karToplam.ToString("N", CultureInfo.GetCultureInfo("tr-TR"));
         }
     }
 }
