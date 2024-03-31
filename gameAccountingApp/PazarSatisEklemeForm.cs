@@ -28,10 +28,10 @@ namespace gameAccountingApp
         {
             if (id == null) 
             {
-                float fiyat1 = float.Parse(PazarFiyatitextBox.Text) * 98 / 100;
-                float fiyat2 = float.Parse(MiktartextBox.Text);
-                float fiyat3 = fiyat2 * fiyat1;
-
+                double fiyat1 = double.Parse(PazarFiyatitextBox.Text) * 98 / 100;
+                double fiyat2 = double.Parse(MiktartextBox.Text);
+                double fiyat3 = fiyat2 * fiyat1;
+                Console.WriteLine(fiyat3);
                 Baglan.Connection.Open();
                 string nick = SaticicomboBox.Text;
                 string query = "Select id FROM KullaniciAdi WHERE Nick = @Nick";//DİKKAT nick
@@ -60,9 +60,9 @@ namespace gameAccountingApp
             }
             else
             {
-                float fiyat1 = float.Parse(PazarFiyatitextBox.Text) * 98 / 100; 
-                float fiyat2 = float.Parse(MiktartextBox.Text);
-                float fiyat3 = fiyat2 * fiyat1;
+                double fiyat1 = double.Parse(PazarFiyatitextBox.Text) * 98 / 100;
+                double fiyat2 = double.Parse(MiktartextBox.Text);
+                double fiyat3 = fiyat2 * fiyat1;
 
                 Baglan.Connection.Open();
                 string nick = SaticicomboBox.Text;

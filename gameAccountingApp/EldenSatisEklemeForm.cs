@@ -47,7 +47,7 @@ namespace gameAccountingApp
                 int UrunId = Convert.ToInt32(result2);
                 Baglan.Connection.Close();
 
-                float ToplamMiktar = float.Parse(MiktartextBox.Text)* float.Parse(PazarFiyatitextBox.Text);
+                double ToplamMiktar = double.Parse(MiktartextBox.Text)* double.Parse(PazarFiyatitextBox.Text);
                 string sql = "Insert into EldenSatis(NickId,Date,UrunId,Adet,NetFiyat,ToplamFiyat) Values('" + KullaniciId + "','" + dateTime.ToShortDateString() + "','" + UrunId + "','" + MiktartextBox.Text + "','" + PazarFiyatitextBox.Text + "','"+ ToplamMiktar + "')";
                 if (CRUD.ESG(sql))
                 {
@@ -77,7 +77,7 @@ namespace gameAccountingApp
                 int UrunId = Convert.ToInt32(result2);
                 Baglan.Connection.Close();
 
-                float ToplamMiktar = float.Parse(MiktartextBox.Text) * float.Parse(PazarFiyatitextBox.Text);
+                double ToplamMiktar = double.Parse(MiktartextBox.Text) * double.Parse(PazarFiyatitextBox.Text);
                 string sql = "Update EldenSatis set NickId='" + KullaniciId + "',UrunId='" + UrunId + "',Adet='" + MiktartextBox.Text + "',NetFiyat='" + PazarFiyatitextBox.Text + "',ToplamFiyat='"+ ToplamMiktar + "'Where id='" + id + "'";
                 if (CRUD.ESG(sql))
                 {

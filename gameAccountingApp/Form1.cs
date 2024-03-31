@@ -32,7 +32,7 @@ namespace gameAccountingApp
         public void EldenSatisListele()
         {
             //string sql = "Select * from EldenSatis";
-            string sql = "Select EldenSatis.id,EldenSatis.Date,KullaniciAdi.Nick,SatilacakUrunler.UrunAdi,EldenSatis.Adet,EldenSatis.NetFiyat,EldenSatis.ToplamFiyat from EldenSatis INNER JOIN KullaniciAdi on EldenSatis.NickId=KullaniciAdi.id INNER JOIN SatilacakUrunler on EldenSatis.UrunId=SatilacakUrunler.id";
+            string sql = "Select EldenSatis.id,EldenSatis.Date,KullaniciAdi.Nick,SatilacakUrunler.UrunAdi,EldenSatis.Adet,EldenSatis.NetFiyat,Cast(ToplamFiyat as varchar) as ToplamFiyat from EldenSatis INNER JOIN KullaniciAdi on EldenSatis.NickId=KullaniciAdi.id INNER JOIN SatilacakUrunler on EldenSatis.UrunId=SatilacakUrunler.id";
             EldenSatisGridWiew.DataSource = CRUD.Listele(sql);
         }
         public void GbSatisListele()
@@ -66,9 +66,9 @@ namespace gameAccountingApp
             int seciliId = Convert.ToInt32(PazarSatisGridWiew.CurrentRow.Cells["id"].Value.ToString());
             PazarSatisEklemeForm frm = new PazarSatisEklemeForm(seciliId);
             frm.SaticicomboBox.Text = PazarSatisGridWiew.CurrentRow.Cells["Nick"].Value.ToString();
-            frm.UruncomboBox.Text = PazarSatisGridWiew.CurrentRow.Cells["UrunAdi"].Value.ToString();
+            frm.UruncomboBox.Text = PazarSatisGridWiew.CurrentRow.Cells["Ürünler"].Value.ToString();
             frm.MiktartextBox.Text = PazarSatisGridWiew.CurrentRow.Cells["Adet"].Value.ToString();
-            frm.PazarFiyatitextBox.Text = PazarSatisGridWiew.CurrentRow.Cells["PazarFiyati"].Value.ToString();
+            frm.PazarFiyatitextBox.Text = PazarSatisGridWiew.CurrentRow.Cells["Fiyat"].Value.ToString();
             frm.ShowDialog();
             PazarSatisListele();
         }
